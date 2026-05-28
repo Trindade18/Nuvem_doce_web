@@ -9,9 +9,8 @@ O objetivo do MVP e permitir que o cliente conheca a Nuvem Doce, veja os produto
 ## Linguagens e Tecnologias
 
 - HTML5: estrutura das paginas `index.html` e `login.html`.
-- CSS3: estilos visuais, responsividade, modal e animacoes no arquivo `style.css`.
 - JavaScript: interacoes do carrinho, formulario, login simulado e envio para WhatsApp no arquivo `script.js`.
-- Tailwind CSS via CDN: carregado no HTML para cumprir o requisito de biblioteca CSS.
+- CSS3: identidade visual personalizada, responsividade, modal e animacoes no arquivo `style.css`.
 - Cypress: testes automatizados de interface.
 - Git e GitHub: versionamento e entrega da documentacao.
 
@@ -77,7 +76,7 @@ O objetivo do MVP e permitir que o cliente conheca a Nuvem Doce, veja os produto
 2. Mantenha as imagens na mesma pasta dos arquivos HTML, CSS e JS.
 3. Clique em `Cardapio` para ver os produtos.
 4. Use `+ Adicionar` para montar o carrinho.
-5. Clique em `Fazer Pedido Agora` para abrir o carrinho.
+5. Clique em `Fazer pedido` ou `Carrinho` para abrir o carrinho.
 
 ## Como Rodar os Testes
 
@@ -119,7 +118,7 @@ git remote add origin https://github.com/seu-usuario/nuvem-doce.git
 git push -u origin main
 ```
 
-3. Confira se o GitHub mostra os arquivos `index.html`, `login.html`, `style.css`, `script.js`, `README.md`, `package.json`, `cypress.config.js` e a pasta `cypress`.
+3. Confira se o GitHub mostra os arquivos `index.html`, `login.html`, `style.css`, `script.js`, `README.md`, `package.json`, `cypress.config.js` e a pasta `e2e`.
 
 ## Roteiro de Apresentacao
 

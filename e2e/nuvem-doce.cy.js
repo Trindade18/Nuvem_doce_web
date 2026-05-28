@@ -9,9 +9,9 @@ describe("Nuvem Doce - MVP", () => {
 
   it("CT01 - exibe pagina inicial e cardapio", () => {
     cy.get('[data-cy="brand-logo"]').should("contain", "Nuvem Doce");
-    cy.get('[data-cy="home-section"]').should("contain", "Doces que adoçam seus melhores momentos");
+    cy.get('[data-cy="home-section"]').should("contain", "Doces artesanais");
 
-    cy.get('a[href="#cardapio"]').click();
+    cy.get('[data-cy="hero-menu-button"]').click();
 
     cy.get('[data-cy="cardapio-section"]').should("be.visible");
     cy.contains("Bolo de Chocolate de Pote").should("be.visible");
@@ -20,7 +20,8 @@ describe("Nuvem Doce - MVP", () => {
 
   it("CT02 - adiciona produto ao carrinho e calcula totais", () => {
     cy.get('[data-cy="add-product-0"]').click();
-    cy.get('[data-cy="hero-order-button"]').scrollIntoView().click();
+    cy.get('[data-cy="cart-count"]').should("contain", "1");
+    cy.get('[data-cy="hero-order-button"]').click();
 
     cy.get('[data-cy="cart-modal"]').should("be.visible");
     cy.get('[data-cy="cart-items"]').should("contain", "Bolo de Chocolate de Pote");
@@ -31,7 +32,7 @@ describe("Nuvem Doce - MVP", () => {
 
   it("CT03 - altera quantidade e remove produto do carrinho", () => {
     cy.get('[data-cy="add-product-0"]').click();
-    cy.get('[data-cy="hero-order-button"]').scrollIntoView().click();
+    cy.get('[data-cy="hero-order-button"]').click();
 
     cy.get('[data-cy="quantity-plus-0"]').click();
     cy.get('[data-cy="cart-quantity-0"]').should("contain", "2");
@@ -43,10 +44,11 @@ describe("Nuvem Doce - MVP", () => {
     cy.get('[data-cy="total-final"]').should("contain", "25,00");
 
     cy.get('[data-cy="remove-item-0"]').click();
-    cy.get('[data-cy="cart-items"]').should("contain", "Nenhum item no carrinho");
+    cy.get('[data-cy="cart-items"]').should("contain", "Seu carrinho esta vazio");
     cy.get('[data-cy="subtotal"]').should("contain", "0,00");
     cy.get('[data-cy="entrega"]').should("contain", "0,00");
     cy.get('[data-cy="total-final"]').should("contain", "0,00");
+    cy.get('[data-cy="cart-count"]').should("contain", "0");
   });
 
   it("CT04 - envia formulario de contato", () => {

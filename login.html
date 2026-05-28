@@ -3,49 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Login - Nuvem Doce</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Login | Nuvem Doce</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="login-body">
+<main class="login-page">
+    <section class="login-shell">
+        <div class="login-media">
+            <a href="index.html" class="brand login-brand" aria-label="Voltar para a pagina inicial">
+                <span class="brand-mark">ND</span>
+                <span>
+                    <strong>Nuvem Doce</strong>
+                    <small>Confeitaria artesanal</small>
+                </span>
+            </a>
 
-<section class="login-page">
+            <h1>Area do cliente</h1>
+            <p>Acesse sua conta demonstrativa para acompanhar pedidos e historico de encomendas.</p>
+        </div>
 
-    <div class="login-container">
+        <div class="login-card">
+            <span class="eyebrow">Bem-vindo de volta</span>
+            <h2>Entrar na conta</h2>
 
-        <h1>☁️ Nuvem Doce</h1>
-        <h2>Entrar na Conta</h2>
+            <form class="login-form" onsubmit="fazerLogin(event)" data-cy="login-form">
+                <label for="loginEmail">Email</label>
+                <input id="loginEmail" type="email" placeholder="voce@email.com" required data-cy="login-email">
 
-        <form class="login-form" onsubmit="fazerLogin(event)" data-cy="login-form">
+                <label for="loginSenha">Senha</label>
+                <input id="loginSenha" type="password" placeholder="Digite sua senha" required data-cy="login-password">
 
-            <input type="email" placeholder="Digite seu email" required data-cy="login-email">
+                <button class="btn btn-primary btn-full" type="submit" data-cy="login-submit">Entrar</button>
+            </form>
 
-            <input type="password" placeholder="Digite sua senha" required data-cy="login-password">
+            <p class="cadastro-texto">
+                Nao possui conta?
+                <a href="index.html#contato">Fale com a Nuvem Doce</a>
+            </p>
 
-            <button type="submit" data-cy="login-submit">Entrar</button>
-
-        </form>
-
-        <p class="cadastro-texto">
-            Não possui conta?
-            <a href="#">Cadastre-se</a>
-        </p>
-
-        <a href="index.html" class="voltar-home">
-            ← Voltar para o site
-        </a>
-
-    </div>
-
-</section>
+            <a href="index.html" class="voltar-home">Voltar para o site</a>
+        </div>
+    </section>
+</main>
 
 <script src="script.js"></script>
 </body>
