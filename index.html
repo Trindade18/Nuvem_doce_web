@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuvem Doce - Doces Artesanais de Qualidade</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container-header">
+        <div class="logo">
+            <h1 data-cy="brand-logo">☁️ Nuvem Doce</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="login.html" class="btn-login-header">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero" data-cy="home-section">
+    <div class="hero-content">
+        <h2>Doces que adoçam seus melhores momentos</h2>
+
+        <p>
+            Bem-vindo à Nuvem Doce! Confeitaria artesanal com receitas
+            tradicionais e ingredientes premium.
+        </p>
+
+        <button class="btn-primary" type="button" onclick="abrirCarrinho()" data-cy="hero-order-button">
+            Fazer Pedido Agora
+        </button>
+    </div>
+</section>
+
+<section class="destaques">
+    <div class="container">
+        <h2>Nossas Especialidades</h2>
+
+        <div class="destaque-grid">
+
+            <article class="destaque-item">
+                <h3>🍰 Bolos</h3>
+                <p>
+                    Bolos caseiros em diversos sabores:
+                    chocolate, baunilha, cenoura e muito mais.
+                </p>
+            </article>
+
+            <article class="destaque-item">
+                <h3>🧁 Cupcakes</h3>
+                <p>
+                    Cupcakes decorados para festas,
+                    casamentos e comemorações especiais.
+                </p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<section id="cardapio" class="cardapio" data-cy="cardapio-section">
+    <div class="container">
+
+        <h2>Cardápio</h2>
+
+        <div class="menu-categoria" data-cy="categoria-bolos">
+            <h3>Bolos</h3>
+
+            <ul class="menu-lista">
+
+                <li>
+                    <strong>Bolo de Chocolate de Pote</strong>
+                    <span class="preco">R$ 15,00</span>
+                    <p>Bolo de chocolate belga com calda de ganache.</p>
+                </li>
+
+                <li>
+                    <strong>Bolo de Cenoura com Cobertura</strong>
+                    <span class="preco">R$ 15,00</span>
+                    <p>Clássico bolo de cenoura com cobertura de cream cheese.</p>
+                </li>
+
+                <li>
+                    <strong>Bolo Red Velvet</strong>
+                    <span class="preco">R$ 15,00</span>
+                    <p>Bolo vermelho sofisticado com frosting de cream cheese.</p>
+                </li>
+
+                <li>
+                    <strong>Bolo de Baunilha com Morango</strong>
+                    <span class="preco">R$ 15,00</span>
+                    <p>Bolo macio com calda de morango.</p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="menu-categoria" data-cy="categoria-cupcakes">
+            <h3>Cupcakes (Unidade)</h3>
+
+            <ul class="menu-lista">
+
+                <li>
+                    <strong>Cupcake Chocolate</strong>
+                    <span class="preco">R$ 6,00</span>
+                    <p>Cobertura cremosa de chocolate.</p>
+                </li>
+
+                <li>
+                    <strong>Cupcake Baunilha com Calda</strong>
+                    <span class="preco">R$ 5,50</span>
+                    <p>Massa macia com cobertura especial.</p>
+                </li>
+
+                <li>
+                    <strong>Cupcake Morango</strong>
+                    <span class="preco">R$ 6,50</span>
+                    <p>Recheado com creme e morango.</p>
+                </li>
+
+                <li>
+                    <strong>Cupcake Cenoura</strong>
+                    <span class="preco">R$ 6,00</span>
+                    <p>Mini bolo de cenoura com chocolate.</p>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="sobre" class="sobre">
+    <div class="container">
+
+        <h2>Sobre a Nuvem Doce</h2>
+
+        <p>
+            Somos uma confeitaria artesanal dedicada a criar doces memoráveis
+            com ingredientes de primeira qualidade.
+        </p>
+
+        <div class="sobre-grid">
+
+            <div class="sobre-item">
+                <h3>🎯 Nossa Missão</h3>
+                <p>
+                    Atender com excelência, entregando doces frescos
+                    e saborosos.
+                </p>
+            </div>
+
+            <div class="sobre-item">
+                <h3>✨ Nossa Visão</h3>
+                <p>
+                    Ser referência em confeitaria artesanal.
+                </p>
+            </div>
+
+            <div class="sobre-item">
+                <h3>❤️ Nossos Valores</h3>
+                <p>
+                    Qualidade, criatividade e carinho.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="depoimentos" class="depoimentos">
+    <div class="container">
+
+        <h2>O que Nossos Clientes Dizem</h2>
+
+        <div class="depoimentos-grid">
+
+            <div class="depoimento-card">
+                <p>"Os bolos foram perfeitos!"</p>
+                <p>— Maria Silva</p>
+            </div>
+
+            <div class="depoimento-card">
+                <p>"Cupcakes incríveis."</p>
+                <p>— João Santos</p>
+            </div>
+
+            <div class="depoimento-card">
+                <p>"Super recomendo!"</p>
+                <p>— Ana Costa</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="contato" data-cy="contato-section">
+    <div class="container">
+
+        <h2>Contato</h2>
+
+        <div class="contato-grid">
+
+            <div class="contato-info">
+                <h3>📍 Localização</h3>
+                <p>Goiânia - GO</p>
+            </div>
+
+            <div class="contato-info">
+                <h3>📞 Telefone</h3>
+                <p>(62) 98765-4321</p>
+            </div>
+
+            <div class="contato-info">
+                <h3>📧 Email</h3>
+                <p>contato@nuvemdoce.com.br</p>
+            </div>
+
+        </div>
+
+        <div class="formulario-contato">
+            <form id="formContato" data-cy="contact-form">
+                <input type="text" placeholder="Seu Nome" required data-cy="contact-name">
+                <input type="email" placeholder="Seu Email" required data-cy="contact-email">
+                <textarea rows="5" placeholder="Mensagem" required data-cy="contact-message"></textarea>
+                <button type="submit" class="btn-primary" data-cy="contact-submit">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Nuvem Doce</p>
+    </div>
+</footer>
+
+<div id="overlayCarrinho" class="overlay-carrinho" onclick="fecharCarrinho()" data-cy="cart-overlay"></div>
+
+<div id="modalCarrinho" class="modal-carrinho" role="dialog" aria-modal="true" aria-labelledby="tituloCarrinho" data-cy="cart-modal">
+    <div class="carrinho-container">
+
+        <div class="carrinho-header">
+            <h2 id="tituloCarrinho">🛒 Carrinho</h2>
+            <button class="btn-fechar" type="button" onclick="fecharCarrinho()" data-cy="close-cart-button">✕</button>
+        </div>
+
+        <div class="carrinho-content">
+
+            <div class="carrinho-produtos">
+                <h3>Produtos</h3>
+                <div id="itensCarrinho" data-cy="cart-items"></div>
+            </div>
+
+            <div class="carrinho-resumo">
+                <h3>Resumo</h3>
+
+                <div class="carrinho-totais">
+                    <div class="total-item">
+                        <span>Subtotal:</span>
+                        <span id="subtotal" data-cy="subtotal">R$ 0,00</span>
+                    </div>
+
+                    <div class="total-item">
+                        <span>Entrega:</span>
+                        <span id="entrega" data-cy="entrega">R$ 0,00</span>
+                    </div>
+
+                    <div class="total-item total-final">
+                        <span>Total:</span>
+                        <span id="totalFinal" data-cy="total-final">R$ 0,00</span>
+                    </div>
+                </div>
+
+                <button class="btn-confirmar" type="button" onclick="confirmarPedido()" data-cy="checkout-button">
+                    Confirmar Pedido
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/5562987654321" target="_blank" rel="noopener noreferrer" class="whatsapp-fixo">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>

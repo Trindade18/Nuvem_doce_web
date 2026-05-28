@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Nuvem Doce</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="login-page">
+
+    <div class="login-container">
+
+        <h1>☁️ Nuvem Doce</h1>
+        <h2>Entrar na Conta</h2>
+
+        <form class="login-form" onsubmit="fazerLogin(event)" data-cy="login-form">
+
+            <input type="email" placeholder="Digite seu email" required data-cy="login-email">
+
+            <input type="password" placeholder="Digite sua senha" required data-cy="login-password">
+
+            <button type="submit" data-cy="login-submit">Entrar</button>
+
+        </form>
+
+        <p class="cadastro-texto">
+            Não possui conta?
+            <a href="#">Cadastre-se</a>
+        </p>
+
+        <a href="index.html" class="voltar-home">
+            ← Voltar para o site
+        </a>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

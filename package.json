@@ -1,0 +1,24 @@
+{
+  "name": "nuvem-doce",
+  "version": "1.0.0",
+  "description": "MVP de site para confeitaria artesanal Nuvem Doce.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 4173 -c-1",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "cypress",
+    "mvp"
+  ],
+  "author": "Nuvem Doce",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.17.0",
+    "http-server": "^14.1.1"
+  }
+}
